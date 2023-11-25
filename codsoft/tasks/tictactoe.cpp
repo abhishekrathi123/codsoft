@@ -2,12 +2,12 @@
 using namespace std;
 void setup(){
     
-    char c;
+    
     cout<<" Press Enter to Start the Game . . .\n";
     getchar();
-    cout<<"**********"<<endl;
+    cout<<"       ***********        "<<endl;
     cout<<"       Tic-Tac-Toe        "<<endl;
-    cout<<"**********\n"<<endl;
+    cout<<"       ***********        \n"<<endl;
     cout<<"Player 1 --> X "<<endl;
     cout<<"Player 2 --> O \n"<<endl;
     cout<<"The Game Board is given Below:"<<endl;
@@ -34,7 +34,7 @@ void update(string board[],int i,int chance){
         board[i-1]='O';
     }
     else{
-        cout<<"Wrong input!!!"<<endl;
+        cout<<"Wrong input ###"<<endl;
     }
 }
 
@@ -58,7 +58,7 @@ bool isWinner(string board[]){
     
     bool ans=false;
     
-    //checking rows
+   
 
     if( (board[0]==board[1]) && ( board[1]==board[2] ) && board[0]!=" "){
         ans=true;
@@ -70,7 +70,7 @@ bool isWinner(string board[]){
         ans=true;
     }
     
-    //checking columns
+   
     
     else if( (board[0]==board[3]) && ( board[3]==board[6] ) && board[0]!=" "){
         ans=true;
@@ -82,7 +82,7 @@ bool isWinner(string board[]){
         ans=true;
     }
     
-    //checking diagonals
+    
     
     else if( (board[0]==board[4]) && ( board[4]==board[8] ) && board[0]!=" "){
         ans=true;
@@ -125,7 +125,7 @@ int whoWon(string board[]){
         }
     }
     
-    //checking columns
+   
     
     else if( (board[0]==board[3]) && ( board[3]==board[6] ) && board[0]!=" "){
         if(board[0]=="X"){
@@ -154,7 +154,7 @@ int whoWon(string board[]){
         }
     }
     
-    //checking diagonals
+  
     
     else if( (board[0]==board[4]) && ( board[4]==board[8] ) && board[0]!=" "){
         if(board[0]=="X"){
@@ -203,11 +203,11 @@ int main(){
         
         if(isWinner(board)){
             if(whoWon(board)==1){
-                cout<<"Congratulations Player 1 ,You Won !!!"<<endl;
+                cout<<"Congratulations Player 1 ,You Won ####"<<endl;
                 break;
             }
             else{
-                cout<<"Congratulations Player 2 ,You Won !!!"<<endl;
+                cout<<"Congratulations Player 2 ,You Won ####"<<endl;
                 break;
             }
         }
@@ -215,7 +215,7 @@ int main(){
         else if(allfilled(board)){
 
             char x;
-            cout<<"It's a Tie!!!"<<endl;
+            cout<<"It's a Tie  ####"<<endl;
             cout<<"Press 'Y' --> Play Again \n 'N' --> End Game "<<endl;
             cin>>x;
             
